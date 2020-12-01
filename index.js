@@ -38,6 +38,10 @@ app.get('/direction', async (req, res) => {
   }
 });
 
+app.post('/webhook', (req, res) => {
+  DOSCG.reply(req, res);
+});
+
 app.listen(port, () => {
   console.log(`Running on ${port}`);
 });
